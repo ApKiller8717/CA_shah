@@ -136,7 +136,7 @@
         }
 
         .services-grid-section {
-            background: #020712;
+            background: #f6f9fc;
             position: relative;
             overflow: hidden;
         }
@@ -145,8 +145,8 @@
             content: "";
             position: absolute;
             inset: 0;
-            background-image: linear-gradient(120deg, rgba(27, 68, 129, 0.22) 0%, transparent 45%, rgba(16, 125, 172, 0.18) 100%);
-            opacity: 0.85;
+            background-image: radial-gradient(circle at 10% 20%, rgba(39, 183, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(132, 59, 206, 0.03) 0%, transparent 40%);
             pointer-events: none;
         }
 
@@ -176,207 +176,301 @@
         .service-card {
             position: relative;
             height: 100%;
-            padding: 28px 24px 26px;
-            border-radius: 18px;
-            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.07), rgba(3, 16, 37, 0.98));
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
+            padding: 32px 28px;
+            border-radius: 20px;
+            background: #ffffff;
+            border: 1px solid rgba(220, 230, 245, 0.7);
+            box-shadow: 0 10px 30px rgba(0, 20, 50, 0.04);
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: all 0.35s ease;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .service-card::before {
             content: "";
             position: absolute;
-            top: -60px;
-            right: -60px;
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            background: radial-gradient(circle at center, rgba(17, 153, 142, 0.55), transparent 65%);
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #b1976b, #0d233e);
             opacity: 0;
-            transition: opacity 0.35s ease, transform 0.35s ease;
-            transform: scale(0.9);
+            transition: opacity 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-10px) translateZ(0);
-            box-shadow: 0 26px 70px rgba(0, 0, 0, 0.7);
-            border-color: rgba(17, 153, 142, 0.55);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 20, 50, 0.08);
+            border-color: transparent;
         }
 
         .service-card:hover::before {
             opacity: 1;
-            transform: scale(1);
         }
 
         .service-card .icon-badge {
-            width: 48px;
-            height: 48px;
+            width: 60px;
+            height: 60px;
             border-radius: 16px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 18px;
-            background: rgba(5, 44, 93, 0.9);
-            border: 1px solid rgba(29, 141, 245, 0.65);
+            margin-bottom: 22px;
+            background: #f0f7ff;
+            border: 1px solid rgba(39, 183, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .icon-badge {
+            background: #b1976b;
+            border-color: #b1976b;
+            transform: scale(1.05) rotate(-5deg);
+        }
+
+        .service-card:hover .icon-badge img {
+            filter: brightness(0) invert(1);
         }
 
         .service-card .icon-badge img {
-            max-width: 26px;
-            max-height: 26px;
+            max-width: 30px;
+            max-height: 30px;
+            transition: all 0.3s ease;
         }
 
         .service-card .eyebrow {
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: #8ec5ff;
-            margin-bottom: 8px;
-            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: #b1976b;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .service-card h4.title {
-            font-size: 18px;
-            margin-bottom: 10px;
+            font-size: 20px;
+            margin-bottom: 12px;
+            line-height: 1.4;
         }
 
         .service-card h4.title a {
-            color: #ffffff;
+            color: #0d233e;
+            transition: color 0.3s ease;
         }
 
         .service-card h4.title a:hover {
-            color: #27b7ff;
+            color: #b1976b;
         }
 
         .service-card p.desc {
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.78);
+            color: #5e6d82;
+            margin-bottom: 20px;
         }
 
         .service-card ul {
-            padding-left: 18px;
-            margin-bottom: 18px;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 24px;
         }
 
         .service-card ul li {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.82);
-            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 13.5px;
+            color: #4a5a7a;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .service-card ul li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: #b1976b;
+            font-weight: bold;
         }
 
         .service-card .btn-part {
             margin-top: auto;
+            border-top: 1px solid #f0f4f8;
+            padding-top: 18px;
         }
 
         .service-card .readon-arrow {
             font-size: 13px;
+            font-weight: 600;
+            color: #0d233e;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .service-card .readon-arrow:hover {
+            color: #b1976b;
         }
 
         .service-card .readon-arrow i {
-            margin-left: 6px;
+            margin-left: 8px;
             font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover .readon-arrow i {
+            transform: translateX(5px);
         }
 
         .services-note {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 15px;
+            color: #5e6d82;
             max-width: 760px;
-            margin: 10px auto 0;
+            margin: 15px auto 0;
         }
 
         .services-pill-row {
-            margin-top: 22px;
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
 
         .services-pill {
             display: inline-flex;
             align-items: center;
-            padding: 5px 13px;
+            padding: 8px 16px;
             border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: rgba(255, 255, 255, 0.78);
-            font-size: 11px;
-            margin: 0 6px 6px;
+            background: #ffffff;
+            border: 1px solid #e1e8f5;
+            color: #4a5a7a;
+            font-size: 12px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        
+        .services-pill:hover {
+            border-color: #b1976b;
+            color: #b1976b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(39, 183, 255, 0.15);
         }
 
         .services-pill span.dot {
-            width: 7px;
-            height: 7px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-            background: #27b7ff;
-            margin-right: 7px;
+            background: #b1976b;
+            margin-right: 8px;
         }
 
         .services-highlight-strip {
-            background: #020712;
-            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            background: #ffffff;
+            border-top: 4px solid #b1976b;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-highlight-strip::before {
+             content: "";
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background-image: radial-gradient(circle at 10% 50%, rgba(177, 151, 107, 0.08) 0%, transparent 50%);
+             pointer-events: none;
         }
 
         .services-highlight-strip .highlight-icon {
-            width: 54px;
-            height: 54px;
-            border-radius: 16px;
-            border: 1px solid rgba(230, 246, 255, 0.22);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid rgba(177, 151, 107, 0.3);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-right: 18px;
-            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.12), rgba(4, 22, 45, 0.9));
+            margin-right: 24px;
+            background: linear-gradient(135deg, #b1976b, #8f7850);
+            box-shadow: 0 8px 20px rgba(177, 151, 107, 0.3);
+            flex-shrink: 0;
         }
 
         .services-highlight-strip .highlight-icon i {
-            font-size: 20px;
-            color: #fff;
+            font-size: 24px;
+            color: #ffffff;
         }
 
         .services-highlight-strip .highlight-text .title {
-            font-size: 18px;
+            font-size: 22px;
+            color: #b1976b !important;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .services-highlight-strip .highlight-text .desc {
-            font-size: 13px;
+            font-size: 14px;
             margin-bottom: 0;
-            color: rgba(255, 255, 255, 0.78);
+            color: #b1976b;
+            line-height: 1.6;
+            max-width: 500px;
         }
 
         .services-highlight-strip .highlight-meta {
             text-align: right;
+            border-left: 1px solid #b1976b;
+            padding-left: 40px;
         }
 
         .services-highlight-strip .highlight-meta .meta-item {
             display: inline-flex;
             flex-direction: column;
             align-items: flex-end;
-            margin-left: 28px;
+            margin-left: 35px;
+            position: relative;
         }
 
         .services-highlight-strip .highlight-meta .label {
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: rgba(255, 255, 255, 0.62);
+            letter-spacing: 0.2em;
+            color: #b1976b;
+            font-weight: 700;
+            margin-bottom: 4px;
         }
 
         .services-highlight-strip .highlight-meta .value {
-            font-size: 18px;
+            font-size: 20px;
             color: #ffffff;
             font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .services-highlight-strip .highlight-meta .value a {
+            color: #b1976b;
+        }
+        
+        .services-highlight-strip .highlight-meta .value a:hover {
+            color: #b1976b;
         }
 
         @media (max-width: 991px) {
             .services-highlight-strip .highlight-meta {
-                margin-top: 22px;
+                margin-top: 30px;
                 text-align: left;
+                border-left: none;
+                padding-left: 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                padding-top: 30px;
+                width: 100%;
             }
 
             .services-highlight-strip .highlight-meta .meta-item {
                 align-items: flex-start;
                 margin-left: 0;
-                margin-right: 22px;
+                margin-right: 30px;
             }
         }
     </style>
@@ -594,8 +688,8 @@
                     </div>
                     <div class="hero-cta" data-aos="fade-up" data-aos-duration="1050">
                         <a class="readon" href="contact.html">Schedule Free Consultation</a>
-                        <a class="link-light" href="#services-grid"><span>Download service overview</span> <i
-                                class="fa fa-long-arrow-right"></i></a>
+                        <!-- <a class="link-light" href="#services-grid"><span>Download service overview</span> <i
+                                class="fa fa-long-arrow-right"></i></a> -->
                     </div>
                 </div>
             </div>
@@ -607,7 +701,7 @@
             <div class="container">
                 <div class="sec-title text-center mb-36 sm-mb-26">
                     <div class="sub-title law-color">Service Overview</div>
-                    <h2 class="title mb-10 white-color">What we bring to your business</h2>
+                    <h2 class="title mb-10">What we bring to your business</h2>
                     <p class="services-note">
                         Every engagement is led by experienced partners and senior professionals to ensure robust compliance,
                         meaningful insights and proactive support across finance, tax and governance.
@@ -691,7 +785,7 @@
                     <!-- Card 4 -->
                     <div class="service-card" data-aos="fade-up" data-aos-duration="750" data-aos-delay="40">
                         <div class="icon-badge">
-                            <img src="assets/images/services/style10/service-shape.png" alt="Startup icon">
+                            <img src="assets/images/services/icons/style11/1.png" alt="Audit icon">
                         </div>
                         <div class="eyebrow">Startups &amp; Growth Businesses</div>
                         <h4 class="title"><a href="startup-advisory.html">Startup &amp; Growth Advisory</a></h4>
@@ -712,7 +806,7 @@
                     <!-- Card 5 -->
                     <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
                         <div class="icon-badge">
-                            <img src="assets/images/services/style5/left-img.jpg" alt="Outsourcing icon">
+                            <img src="assets/images/services/icons/style11/2.png" alt="Tax icon">
                         </div>
                         <div class="eyebrow">Outsourced Finance</div>
                         <h4 class="title"><a href="accounting-business-support.html">Accounting &amp; Finance Outsourcing</a>
@@ -734,7 +828,7 @@
                     <!-- Card 6 -->
                     <div class="service-card" data-aos="fade-up" data-aos-duration="850" data-aos-delay="120">
                         <div class="icon-badge">
-                            <img src="assets/images/services/style5/right-img.jpg" alt="International icon">
+                            <img src="assets/images/services/icons/style11/3.png" alt="Automation icon">
                         </div>
                         <div class="eyebrow">Cross‑Border &amp; Regulatory</div>
                         <h4 class="title"><a href="international-tax-cross-border-taxation.html">International Tax &amp;
@@ -757,7 +851,7 @@
                     <!-- Card 7 -->
                     <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">
                         <div class="icon-badge">
-                            <img src="assets/images/services/icons/style11/2.png" alt="Forensic icon">
+                            <img src="assets/images/services/icons/style11/1.png" alt="Audit icon">
                         </div>
                         <div class="eyebrow">Risk &amp; Investigation</div>
                         <h4 class="title"><a href="forensic-investigation-services.html">Forensic &amp; Investigation
@@ -780,7 +874,7 @@
                     <!-- Card 8 -->
                     <div class="service-card" data-aos="fade-up" data-aos-duration="850" data-aos-delay="110">
                         <div class="icon-badge">
-                            <img src="assets/images/services/style10/service-shape.png" alt="CFO icon">
+                            <img src="assets/images/services/icons/style11/2.png" alt="Tax icon">
                         </div>
                         <div class="eyebrow">Virtual CFO</div>
                         <h4 class="title"><a href="startup-advisory.html">Virtual CFO &amp; Board Support</a></h4>
@@ -801,7 +895,7 @@
                     <!-- Card 9 -->
                     <div class="service-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="140">
                         <div class="icon-badge">
-                            <img src="assets/images/services/icons/style11/3.png" alt="Registration icon">
+                            <img src="assets/images/services/icons/style11/3.png" alt="Automation icon">
                         </div>
                         <div class="eyebrow">Setup &amp; Registration</div>
                         <h4 class="title"><a href="setting-up-registration.html">Entity Setup &amp; Registrations</a></h4>
@@ -833,7 +927,7 @@
                                 <i class="fa fa-headphones"></i>
                             </div>
                             <div class="highlight-text" data-aos="fade-left" data-aos-duration="800">
-                                <h4 class="title white-color mb-5">Need help choosing the right service mix?</h4>
+                                <h4 class="title mb-5">Need help choosing the right service mix?</h4>
                                 <p class="desc mb-0">Share your current challenges and we will design a tailored compliance
                                     and advisory roadmap aligned to your growth plans.</p>
                             </div>
