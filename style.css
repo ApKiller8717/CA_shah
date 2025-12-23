@@ -19595,105 +19595,229 @@ body .modal-backdrop {
 
 /* Modern Contact Section */
 #rs-contact .info-item.modern-card {
-    background: #fff;
-    padding: 50px 30px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-    text-align: center;
-    transition: all 0.4s ease;
-    border-bottom: 4px solid transparent;
-    height: 100%;
+  background: #fff;
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: all 0.4s ease;
+  border-bottom: 4px solid transparent;
+  height: 100%;
 }
 #rs-contact .info-item.modern-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(177, 151, 107, 0.15);
-    border-bottom: 4px solid #b1976b;
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(177, 151, 107, 0.15);
+  border-bottom: 4px solid #b1976b;
 }
 #rs-contact .info-item.modern-card .icon-part {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 30px;
-    background: #fdfaf4;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 30px;
+  background: #fdfaf4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
 }
 #rs-contact .info-item.modern-card:hover .icon-part {
-    background: #b1976b;
-    box-shadow: 0 10px 20px rgba(177, 151, 107, 0.3);
+  background: #b1976b;
+  box-shadow: 0 10px 20px rgba(177, 151, 107, 0.3);
 }
 #rs-contact .info-item.modern-card .icon-part i {
-    font-size: 36px;
-    color: #b1976b;
-    transition: all 0.4s ease;
+  font-size: 36px;
+  color: #b1976b;
+  transition: all 0.4s ease;
 }
 #rs-contact .info-item.modern-card:hover .icon-part i {
-    color: #fff;
+  color: #fff;
 }
 #rs-contact .info-item.modern-card .content-part .title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #222;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
 }
 #rs-contact .info-item.modern-card .content-part a,
 #rs-contact .info-item.modern-card .content-part p {
-    color: #666;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.8;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
 }
 #rs-contact .info-item.modern-card .content-part a:hover {
-    color: #b1976b;
+  color: #b1976b;
 }
 
 /* Modern Audit Detail Cards */
 .service-detail-card {
-    background: #fff;
-    padding: 35px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    height: 100%;
-    transition: all 0.3s ease;
-    border-top: 4px solid #b1976b;
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: all 0.3s ease;
+  border-top: 4px solid #b1976b;
 }
 .service-detail-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 .service-detail-card h5 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #222;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
 }
 .service-detail-card ul {
-    margin: 0;
-    padding: 0;
-    list-style: none !important;
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
 }
 .service-detail-card ul li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
-    color: #555;
-    font-size: 15px;
-    line-height: 1.6;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
 }
 .service-detail-card ul li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .service-detail-card ul li::before {
-    content: '\f00c';
-    font-family: 'FontAwesome';
-    position: absolute;
-    left: 0;
-    top: 3px;
-    color: #b1976b;
-    font-size: 14px;
+  content: "\f00c";
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: #b1976b;
+  font-size: 14px;
 }
 
+/* -----------------------------------
+    44. Modern Service Card CSS
+-------------------------------------*/
+.modern-service-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.modern-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #b1976b;
+}
+
+.modern-service-card .card-icon {
+  font-size: 50px;
+  color: #032e42;
+  margin-bottom: 25px;
+  line-height: 1;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.modern-service-card:hover .card-icon {
+  color: #b1976b;
+  transform: scale(1.1);
+}
+
+.modern-service-card h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0d233e;
+  min-height: auto;
+}
+
+.modern-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modern-service-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.service-card-header .card-icon {
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  background: #f9f6f0;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 20px;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card-header .card-icon i {
+  color: #b1976b;
+  font-size: 28px;
+  transition: all 0.4s ease;
+}
+
+.service-card-header h5 {
+  margin-bottom: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.modern-service-card:hover .service-card-header .card-icon {
+  background: #b1976b;
+  box-shadow: 0 10px 20px rgba(177, 151, 107, 0.3);
+  transform: translateY(-3px);
+}
+
+.modern-service-card:hover .service-card-header .card-icon i {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.modern-service-card:hover .service-card-header h5 {
+  color: #b1976b;
+}
+
+.modern-service-list li::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: #b1976b;
+  font-size: 12px;
+}
+
+.page-intro-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 50px;
+  max-width: 900px;
+}
