@@ -19821,3 +19821,18 @@ body .modal-backdrop {
   margin-bottom: 50px;
   max-width: 900px;
 }
+
+/* Map Section Styles */
+.map-area {
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 10px solid #ffffff;
+}
+
+.map-area iframe {
+    width: 100% !important;
+    height: 500px;
+    display: block;
+}
+
